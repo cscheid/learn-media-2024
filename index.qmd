@@ -17,7 +17,7 @@ format:
     height: "900"
     filters:
       - positslides
-    footer: "carlos.scheidegger@posit.co --- Charleston, SC, 2024-03-08"
+    footer: "<https://cscheid.github.io/learn-media-2024/>"
     css: talk.css
 engine: jupyter
 ---
