@@ -1,0 +1,10 @@
+---
+title: Penguins!
+author: Carlos Scheidegger
+---
+
+## Introduction
+
+Look at the results in @fig-1!
+
+![A scatterplot of penguin bill length and depth](./penguins.png){#fig-1}

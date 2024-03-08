@@ -1,0 +1,30 @@
+---
+title: Penguins!
+author: Carlos Scheidegger
+crossrefs-hover: false
+---
+
+## Introduction
+
+Look at the results in @fig-1!
+
+```{python}
+#| label: fig-1
+#| echo: false
+#| fig-cap: A scatterplot of penguin bill length and depth
+import altair as alt
+import pandas as pd
+
+penguins = pd.read_csv("https://pos.it/palmer-penguins-github-csv")
+alt.Chart(penguins).mark_circle(size=60).encode(
+    alt.X('bill_length_mm',
+        scale=alt.Scale(zero=False)
+    ),
+    alt.Y('bill_depth_mm',
+        scale=alt.Scale(zero=False)
+    ),
+    color = alt.Color('species', scale = alt.Scale(domain = ['Adelie', 'Chinstrap', 'Gentoo'],
+                  range = ["#FF8C00", "#A020F0", "#008B8B"])),
+    tooltip=['species', 'sex', 'island']
+)
+```
